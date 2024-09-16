@@ -9,7 +9,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { setUser } = useContext(AuthContext);
+  // const { setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -19,7 +19,7 @@ const Login = () => {
         email,
         password
       );
-      setUser(userCredential.user);
+      // setUser(userCredential.user);
       navigate("/books");
     } catch (err) {
       setError(err.message);
